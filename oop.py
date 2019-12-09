@@ -24,7 +24,7 @@ class NGramTokenizer(object):
     """
     def __init__(self, ngrams=1,
                  gramskip=1,
-                 min_count=0,
+                 min_count=1,
                  **kwargs):
         
         if kwargs:
@@ -119,8 +119,7 @@ class NGramTokenizer(object):
             in the corpus.
         """
         if self.ngrams != 1 or self.gramskip != 1:
-            raise ValueError("'ngrams' AND 'gramskip' values must be 1 for a \
-                             sequencer model.")
+            raise ValueError("'ngrams' AND 'gramskip' values must be 1 for a sequencer model.")
         
         if not max_size:
             max_size = max([len(doc) for doc in corpus])
@@ -142,7 +141,37 @@ class NGramTokenizer(object):
         
         return sequence
         
+    def sequence_to_text(self,
+                         sequence):
+        """
+        Function that returns a text from a sequence or list of sequences.
+        ATT: if min_count > 1, some of the original sequences may be incomplete
+        OUTPUT:
+            >> A string built using the character index
+        """    
         
+        if self.ngrams != 1 or self.gramskip != 1:
+            raise ValueError("'ngrams' AND 'gramskip' values must be 1 for a sequencer model.")
+        
+        ### If list of lists,　flatten into a 1D list
+        if type(sequence[0]) == list:
+            sequence = [item for sublist in sequence for item in sublist]
+        
+        if self.min_count > 1:
+            print("Warning: min_count was set as {}. Some characters might be omitted in the string returned by this function. \n".format(str(self.min_count)))
+        
+        output_text = list()
+        
+        #Invert dictionary for mapping
+        invert_dict = {v: k for k, v in self.ngram_dict.items()}
+        
+        for char_index in sequence:
+            if char_index in invert_dict.keys():
+                output_text.append(invert_dict[char_index])
+                
+        return "".join(output_text)
+        
+    
     def ngram_index(self):
         
         if not self.ngram_dict:
@@ -153,5 +182,4 @@ class NGramTokenizer(object):
             
         return self.ngram_dict
         
-        
-
+       
