@@ -8,7 +8,7 @@ The classification task is identifying the native language of students of a fore
 The dataset is comprised of 3,069 student essays compiled by the Center of Linguistics from the University of Lisbon. 
 The students are native speakers of Chinese, English, Spanish, German, Russian, French, Japanese, Italian, Dutch, Tetum, Arabic, Polish, Korean, Romanian and Swedish. The original paper can be found [here](https://www.aclweb.org/anthology/W18-0534.pdf).
 
-In order to reduce class imbalance, only five languages were kept reducing the total to 2,477 essays. The class distribution is as follows:
+In order to fix class imbalance, only five languages were kept reducing the total number of essays to 2,477. The class distribution is as follows:
 
 | Language      | Count         | 
 | ------------- |:-------------:| 
