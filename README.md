@@ -5,7 +5,15 @@ The purpose of this repository is to reproduce the best algorithm/hyperparameter
 The classification task is identifying the native language of students of a foreign language by analyzing written essays. In the case of the paper, that language is English. I will attempt the same algorithm on a Portuguese dataset. The feature space is expected to be larger because of diacritics.
 
 ### The Dataset
-The dataset is comprised of 1,868 student essays compiled by the Center of Linguistics from the University of Lisbon. 
+The dataset is comprised of 3,069 student essays compiled by the Center of Linguistics from the University of Lisbon. 
 The students are native speakers of Chinese, English, Spanish, German, Russian, French, Japanese, Italian, Dutch, Tetum, Arabic, Polish, Korean, Romanian and Swedish. The original paper can be found [here](https://www.aclweb.org/anthology/W18-0534.pdf).
 
-### The Algorithm
+In order to reduce class imbalance, only five languages were kept reducing the total to 2,477 essays. The class distribution is as follows:
+
+| Language      | Count         | 
+| ------------- |:-------------:| 
+| Spanish       | 614           | 
+| Italian       | 565           |
+| Mandarin      | 445           |
+| German        | 438           |
+| English       | 415           |
