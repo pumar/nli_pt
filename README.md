@@ -19,3 +19,7 @@ In order to fix class imbalance, only five languages were kept reducing the tota
 | German        | 438           |
 | English       | 415           |
 
+### The Model
+The author of the paper applied a plethora of algorithms to their dataset and checked the final F1-score supplied by the competition's judges. Here, only the best overall model will be applied.
+
+It consists of a non-parametric linear SVM applied on a bag-of-words tokenization scheme enriched with ngrams with n from 2-9.
