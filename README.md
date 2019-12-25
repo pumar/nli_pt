@@ -1,7 +1,7 @@
 # NLI - Portuguese
 Native Language Identification of foreigner language learners of european portuguese using character level n-grams
 ## Introduction
-The purpose of this repository is to reproduce the best algorithm/hyperparameters/feature engineering done by [this](https://www.aclweb.org/anthology/W17-5043.pdf) paper. The authors used a basic [fasttext](https://arxiv.org/pdf/1607.01759.pdf) algorithm to leverage 'good-enough' linear statistical learning algorithms as well as some deep learning with convolutions to find the optimal solution that is not resource heavy.
+The purpose of this repository is to reproduce the best algorithm/hyperparameters/feature engineering done by [this](https://www.aclweb.org/anthology/W17-5043.pdf) paper. The authors used a basic [fasttext](https://arxiv.org/pdf/1607.01759.pdf) algorithm to leverage 'good-enough' linear statistical learning algorithms as well as some deep learning with convolutions to find the optimal solution that is not resource heavy. The paper was part of a NLI competition and they ultimately received first place using decades old algorithms running against state-of-the-art deep learning solutions.
 
 The classification task is identifying the native language of students of a foreign language by analyzing written essays using characters as tokens. In the case of the paper, that language is English. I will attempt the same algorithm on a Portuguese dataset. The feature space is expected to be larger because of diacritics.
 
@@ -20,6 +20,6 @@ In order to fix class imbalance, only five languages were kept reducing the tota
 | English       | 415           |
 
 ### The Model
-The author of the paper applied a plethora of algorithms to their dataset and checked the final F1-score supplied by the competition's judges. Here, only the best overall model will be applied.
+The author of the paper applied a plethora of algorithms to their dataset and checked the final F1-score calculated by the competition's judges. Here, only the best overall model will be applied.
 
 It consists of a non-parametric linear SVM applied on a bag-of-words tokenization scheme enriched with ngrams with n from 2-9.
