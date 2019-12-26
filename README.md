@@ -24,4 +24,4 @@ An additional preprocessing step consisted of using a token (縵, a very *infreq
 ### The Model
 The author of the paper applied a plethora of algorithms to their dataset and checked the final F1-score calculated by the competition's judges. Here, only the best overall model will be applied.
 
-It consists of a non-parametric linear SVM applied on a bag-of-words tokenization scheme enriched with ngrams with n from 2-9.
+It consists of a non-parametric linear SVM applied on a bag-of-words tokenization scheme enriched with ngrams, n from 2-9.
