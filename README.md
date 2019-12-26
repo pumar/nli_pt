@@ -19,6 +19,8 @@ In order to fix class imbalance, only five languages were kept reducing the tota
 | German        | 438           |
 | English       | 415           |
 
+An additional preprocessing step consisted of using a token for names instead of the proposed "XXXXX" that replaced proper names in the original dataset. While fine for a word-level tokenization, unecessary repetition should be avoided when applying character level ngrams.
+
 ### The Model
 The author of the paper applied a plethora of algorithms to their dataset and checked the final F1-score calculated by the competition's judges. Here, only the best overall model will be applied.
 
