@@ -27,3 +27,6 @@ The author of the paper applied a plethora of algorithms to their dataset and ch
 It consists of a non-parametric linear SVM applied on a bag-of-words tokenization scheme enriched with ngrams, n from 2-9. The input is modified by a tf-idf scoring system, with term frequency being simply a binary counter and the inverse document frequency the natural logarithm of the number of documents divided by the number of documents in which the ngram appears:
 
 idf = ln(N/n_t)
+
+
+###Results
