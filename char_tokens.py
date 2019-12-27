@@ -161,7 +161,9 @@ class NGramTokenizer(object):
             
             idf_dict = dict()
             idf_N = len(corpus)
-            
+            """
+            Builds a dictionary counting each gram's (binary) prevalence in the corpus.
+            """
             for ngram in self.ngram_dict.keys():
                 ngram_prevalence = 0
                 for document in corpus:
