@@ -24,7 +24,7 @@ An additional preprocessing step consisted of using a token (縵, a very *infreq
 ### The Model
 The author of the paper applied a plethora of algorithms to their dataset and checked the final F1-score calculated by the competition's judges. Here, only the best overall model will be applied.
 
-It consists of a non-parametric linear SVM applied on a bag-of-words tokenization scheme enriched with ngrams, n from 2-9. Additionally,the input is modified by a tf-idf scoring system, with term frequency being simply a binary counter (rather than a raw count) and the inverse document frequency the natural logarithm of the number of documents divided by the number of documents in which the ngram appears:
+It consists of a non-parametric linear SVM applied on a bag-of-words tokenization scheme enriched with ngrams, n from 2-9. Additionally, the input is modified by a tf-idf scoring system. The term frequency was opted to be simply a binary counter (rather than a raw count), and the inverse document frequency was chosen as the regular natural logarithm of the number of documents divided by the number of documents in which the ngram appears:
 
 idf = ln(N/n_t)
 
