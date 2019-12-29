@@ -179,7 +179,7 @@ class NGramTokenizer(object):
                 idfs.append(idf_list)
                 
 
-        return (multiply(tfs,idfs)).tolist()
+        return (multiply(tfs,idfs))
     
     def to_sequence(self,
                     corpus,
