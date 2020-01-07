@@ -37,4 +37,4 @@ The tokenization and schematization was done using [this](https://github.com/pum
 | 1             | 45.926 ±0.951           | 
 | 2             | 54.836 ±0.783           |
 | 3             | 69.944 ±0.492           |
-| 3             | 77.944 ±0.412           |
+| 4             | 77.944 ±0.412           |
