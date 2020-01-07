@@ -31,3 +31,8 @@ idf = ln(N/n_t)
 The tokenization and schematization was done using [this](https://github.com/pumar/nli_pt/blob/master/char_tokens.py) module written with efficiency in mind when dealing with character tokens.
 
 ### Results
+
+| Maximum gram  | Weighted F1-Score |
+| ------------- |:------------====-:| 
+| 1             | 0.39404           | 
+| 2             | 0.51240           |
