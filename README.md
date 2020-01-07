@@ -34,7 +34,7 @@ The tokenization and schematization was done using [this](https://github.com/pum
 
 | Maximum gram  | Weighted F1-Score (x10²)|
 | ------------- |:-----------------------:| 
-| 1             | 45.926 ±0.951           | 
-| 2             | 54.836 ±0.783           |
-| 3             | 69.944 ±0.492           |
-| 4             | 77.944 ±0.412           |
+| 1             | 45.926 ±5.951           | 
+| 2             | 54.836 ±4.783           |
+| 3             | 69.944 ±2.492           |
+| 4             | 77.944 ±2.012           |
