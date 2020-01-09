@@ -28,7 +28,7 @@ It consists of a non-parametric linear SVM applied on a bag-of-words tokenizatio
 
 idf = ln(N/n_t)
 
-The tokenization and schematization was done using [this](https://github.com/pumar/nli_pt/blob/master/char_tokens.py) module written with efficiency in mind when dealing with character tokens.
+The tokenization and schematization was done using [this](https://github.com/pumar/nli_pt/blob/master/char_tokens.py) module that I wrote with efficiency in mind when dealing with character tokens.
 
 ### Results
 
