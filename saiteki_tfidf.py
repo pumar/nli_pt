@@ -7,8 +7,7 @@ class NGramTokenizer(object):
     """
     Character-level tokenizer class that efficiently includes ngrams into the 
     output bag of words model, which can be optionally incremented with tf-idf. 
-    Alternatively, also includes the option to build sequential models for 
-    neural networks with convolution layer(s).
+    
     
     INPUT:
        
