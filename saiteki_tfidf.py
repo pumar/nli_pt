@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from numpy import multiply, log
 import numpy as np
 
@@ -31,8 +33,8 @@ class NGramTokenizer(object):
         if kwargs:
             raise TypeError('Unrecognized keyword arguments: ' + str(kwargs))
         
-        if gramskip < 1:
-            raise ValueError('gramskip must be more than 0.')
+        if gramskip != 1:
+            raise ValueError('gramskip must be 1.')
             
         self.ngrams = ngrams
         self.gramskip = gramskip
@@ -111,7 +113,7 @@ class NGramTokenizer(object):
                         doc_gram[self.ngram_dict[current_gram]-1] += 1
             bow.append(doc_gram)
             
-        return bow
+        return np.array(bow)
     
     def tf_idf(self,
                corpus,
@@ -133,9 +135,11 @@ class NGramTokenizer(object):
             print("WARNING: 'gramskip' values different than 1 are ill-advised\
                   for a tf-idf model. \n")
 
-        tfs = list()
+        tfs = self.bag_of_words(corpus)
 
         
-        tfs = [[count if count == 0 else 1 for count in doc] for doc in (self.bag_of_words(corpus))]
+        
+        tfs = np.where(tfs == 0, 0, 1)
     
         return multiply(tfs,log(len(corpus)/np.sum(tfs,axis=0)))
+        
