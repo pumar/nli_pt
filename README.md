@@ -36,6 +36,11 @@ The tokenization and schematization was done using [this](https://github.com/pum
 | ------------- |:-----------------------:| 
 | 1             | 45.926 ±5.951           | 
 | 2             | 54.836 ±4.783           |
-| 3             | 69.944 ±2.492           |
+| 3             | 69.417 ±2.492           |
 | 4             | 77.944 ±2.012           |
+| 5             | 84.155 ±2.359           |
+| 6             | 88.385 ±1.866           |
+| 7             | 90.790 ±0.927           |
+
+8-gram and 9-gram models are still outside the realm of possibility when limited by a 8GB RAM laptop. More to come!
 
